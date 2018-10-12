@@ -33,7 +33,7 @@ describe('Add', () => {
     });
     it('Tests the negative numbers and if it throws an excepction', () => {
         expect(function(){
-            Add("1,4,5,-3,-4,77,-1")
+            Add("1,4,5,-3,-4,77,-1")//I forgot to add this to it's own commit, this comment is to let git recognize it as changed
         }).toThrow();
     });
     it('Tests numbers over a thousand', () => {

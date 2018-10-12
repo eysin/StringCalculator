@@ -15,7 +15,7 @@ function Add(numbers){
             negatives += (splits[i] + ",");
         }
         if(!(parseInt(splits[i]) >= 1000)){
-            returner += parseInt(splits[i]);
+            returner += parseInt(splits[i]);//I forgot to add this to it's own commit, this comment is to let git recognize it as changed
         }
     }
     if(negatives !== ""){
