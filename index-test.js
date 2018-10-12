@@ -39,6 +39,22 @@ describe('Add', () => {
     it('Tests numbers over a thousand', () => {
         expect(Add('1001,2')).toBe(2);
     });
+    it('Same as the previous random string test, except here I start with ; as a delmiter', () =>{
+        for(let i = 0; i < 100; i ++){
+            let stringBuilder = ";\n";
+            let currentTest = 0;
+            for(let n = 0; n < (Math.floor(Math.random() * 100)); n++){
+                let tempNumb = Math.floor(Math.random() * 100);
+                currentTest += tempNumb;
+                stringBuilder += (tempNumb.toString());
+                stringBuilder += ";";
+                
+                
+            }
+            stringBuilder = stringBuilder.substring(0, stringBuilder.length - 1);
+            expect(Add(stringBuilder)).toBe(currentTest);
+        }
+    });
   });
   
   Math.floor(Math.random() * 100);

@@ -2,14 +2,25 @@ function Add(numbers){
     if(numbers === ""){
         return 0;
     }
-    var splits = numbers.split(',');
-    let tempSplits = [];
-    for(let i = 0; i < splits.length; i++){
-        tempSplits.push.apply(tempSplits, splits[i].split('\n'));
-    }
-    splits = tempSplits;
     let negatives = "";
     let returner = 0;
+    let splits = [];
+    if(!numbers.match(/^\d/)){//Checks if the first letter in the string is a number or not
+        let delimiter = numbers[0];
+        numbers = numbers.substring(2);
+        splits = numbers.split(delimiter);
+    }
+    else{
+        splits = numbers.split(',');
+        let tempSplits = [];
+        for(let i = 0; i < splits.length; i++){
+            tempSplits.push.apply(tempSplits, splits[i].split('\n'));
+        }
+        splits = tempSplits;
+        
+    }
+
+
     for(let i = 0; i < splits.length; i++){
         if(parseInt(splits[i]) < 0){
             negatives += (splits[i] + ",");
@@ -23,6 +34,7 @@ function Add(numbers){
         throw ("Negatives not allowed: " + negatives);
     }
     return returner;
+    
 }
 
 
