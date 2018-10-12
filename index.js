@@ -3,12 +3,11 @@ function Add(numbers){
         return 0;
     }
     var splits = numbers.split(',');
-    if(splits.length === 1){
-        return parseInt(splits[0]);
+    let returner = 0;
+    for(let i = 0; i < splits.length; i++){
+        returner += parseInt(splits[i]);
     }
-    if(splits.length === 2){
-        return parseInt(splits[0]) + parseInt(splits[1]);
-    }
+    return returner;
 }
 
 
