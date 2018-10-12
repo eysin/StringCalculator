@@ -19,7 +19,13 @@ describe('Add', () => {
             for(let n = 0; n < (Math.floor(Math.random() * 100)); n++){
                 let tempNumb = Math.floor(Math.random() * 100);
                 currentTest += tempNumb;
-                stringBuilder += (tempNumb.toString() + ",");
+                stringBuilder += (tempNumb.toString());
+                if(Math.floor(Math.random() * 2) === 0){
+                    stringBuilder += ",";
+                }
+                else{
+                    stringBuilder += "\n";
+                }
             }
             stringBuilder = stringBuilder.substring(0, stringBuilder.length - 1);
             expect(Add(stringBuilder)).toBe(currentTest);
