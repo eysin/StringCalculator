@@ -1,0 +1,26 @@
+{
+  "name": "stringcalculator",
+  "jest": {
+    "testRegex": ".*-test\\.js$",
+    "testEnvironment": "node"
+  },
+  "version": "1.0.0",
+  "description": "Kata String Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eysin/StringCalculator.git"
+  },
+  "author": "Eyþór Örn Hafliðason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eysin/StringCalculator/issues"
+  },
+  "homepage": "https://github.com/eysin/StringCalculator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
