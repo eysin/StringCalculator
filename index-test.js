@@ -31,5 +31,14 @@ describe('Add', () => {
             expect(Add(stringBuilder)).toBe(currentTest);
         }
     });
+    it('Tests the negative numbers and if it throws an excepction', () => {
+        expect(function(){
+            Add("1,4,5,-3,-4,77,-1")
+        }).toThrow();
+    });
+    it('Tests numbers over a thousand', () => {
+        expect(Add('1001,2')).toBe(2);
+    });
   });
+  
   Math.floor(Math.random() * 100);
